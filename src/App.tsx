@@ -54,8 +54,8 @@ function App() {
   const currentOffset = offset;
 
   const url = isSearch
-    ? `https://frontapp-vawt.onrender.com/notes-search?offset=${currentOffset}&search=${encodeURIComponent(searchTxt)}`
-    : `https://frontapp-vawt.onrender.com/notes?offset=${currentOffset}`;
+    ? `https://backapp-xmhk.onrender.com/?offset=${currentOffset}&search=${encodeURIComponent(searchTxt)}`
+    : `https://backapp-xmhk.onrender.com/notes?offset=${currentOffset}`;
 
   fetch(url)
     .then(response => {
@@ -90,7 +90,7 @@ function App() {
 
     const interval = setInterval(() => {
       if (!isSearch && (checkablesRef.current.length > 0 || positionsRef.current.length > 0)) {
-        fetch(`https://frontapp-vawt.onrender.com/change-notes`, {
+        fetch(`https://backapp-xmhk.onrender.com/change-notes`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -119,7 +119,7 @@ function App() {
       if (checkablesRef.current.length > 0 || positionsRef.current.length > 0) {
         let notes_checked_value = checkablesRef.current;
         let notes_position_value = searchTxt !== '' ? [] : positionsRef.current;
-        fetch(`https://frontapp-vawt.onrender.com/change-notes`, {
+        fetch(`https://backapp-xmhk.onrender.com/change-notes`, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
