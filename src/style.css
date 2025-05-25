@@ -1,0 +1,38 @@
+#title {
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 100px;
+}
+#container {
+    width: 450px;
+    height: 500px;
+    background-color: rgb(236, 243, 244);
+    margin-left: 100px;
+    overflow: auto;
+}
+.element {
+    font-size: 25px;
+    border-bottom: 1px solid rgb(214, 218, 220);
+    margin-top: 25px;
+}
+.element span {
+    margin-left: 100px;
+}
+.element input {
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+}
+#search-field {
+    margin-left: 100px;
+}
+#search-btn {
+    margin-left: 15px;
+}
+#search-txt {
+    margin-left: 100px;
+    color: gray;
+}
+#subtitle {
+    margin-left: 100px;
+}
