@@ -109,7 +109,7 @@ function App() {
             }
           });
       }
-    }, 500);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [isSearch]);
