@@ -167,16 +167,21 @@ const toggleNote = (id: number, isChecked: boolean) => {
     }]);
   };
 
-  const handleSearch = () => {
-    const value = (document.querySelector('#search-field') as HTMLInputElement).value;
-    setSearch(value !== '');
-    setSearchTxt(value);
-    setOffset(0);
-    setHasMore(true);
-    setNotes([]);
-    setSearchVersion(prev => prev + 1);
-    hasLoaded.current = false;
-  };
+const handleSearch = () => {
+  const value = (document.querySelector('#search-field') as HTMLInputElement).value;
+
+  setSearch(value !== '');
+  setSearchTxt(value);
+  setOffset(0);
+  setHasMore(true);
+  setNotes([]);
+  setSearchVersion(prev => prev + 1);
+
+  hasLoaded.current = false;
+
+  setTimeout(() => loadMore(), 0);
+};
+
 
   useEffect(() => {
   if (offset === 0) {
