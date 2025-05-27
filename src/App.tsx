@@ -54,7 +54,7 @@ function App() {
   const currentOffset = offset;
 
   const url = isSearch
-    ? `https://backapp-xmhk.onrender.com/notes?offset=${currentOffset}&search=${encodeURIComponent(searchTxt)}`
+    ? `https://backapp-xmhk.onrender.com/notes-search?offset=${currentOffset}&search=${encodeURIComponent(searchTxt)}`
     : `https://backapp-xmhk.onrender.com/notes?offset=${currentOffset}`;
 
   fetch(url)
